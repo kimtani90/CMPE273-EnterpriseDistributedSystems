@@ -1,0 +1,32 @@
+<!-- Write a program to show the use of input type tags in a sign up form -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	
+	function save(){
+		document.getElementById("succeeded").innerHTML="Saved Successfully!!";
+	}
+	</script>
+</head>
+<body>
+
+<form>
+<table>
+<tr><td><h1><b>Sign Up Form</b></h1></td></tr>
+  <tr><td><div id="succeeded"></div><br></td></tr>
+  <tr><td>First name:</td> <td><input type="text" name="fname" autofocus required></td></tr>
+  <tr><td>Last name:</td><td> <input type="text" name="lname" required></td></tr>
+  <tr><td> Email: </td> <td><input type="email" name="email" required pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,3}$"></td></tr>
+  <tr><td>Contact Number:</td><td> <input type="tel" name="phno" required pattern="^(\([0-9]{3}\)|[0-9]{3})[-|\s]{0,1}[0-9]{3}-[0-9]{4}$"></td></tr>
+  
+  <tr><td><br><input type="button" value="Save" onclick="save()"></td>
+  <td> <br><input type="reset"></td></tr>
+  
+  </table>
+  
+</form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- Write a program to find the current location of the user and display it on a map -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="current">Click to get your current location</p>
+
+<button onclick="getLocation()">Click Me</button>
+
+<div id="map"></div>
+
+<script>
+
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+    	document.getElementById("current").innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var pos = position.coords.latitude + "," + position.coords.longitude;
+    var imageUrl = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +pos+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+    document.getElementById("map").innerHTML = "<img src='"+imageUrl+"'>";
+}
+
+</script>
+
+</body>
+</html>

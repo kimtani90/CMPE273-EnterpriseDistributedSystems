@@ -1,0 +1,30 @@
+<!-- Write a program to check whether electricity bill has been paid by the user -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function payBill() {
+	if(typeof(Storage) !== "undefined") {
+	
+		if(document.getElementById("accId").value=="12345" && !localStorage.paid){
+			localStorage.paid=true;
+			 document.getElementById("billpaid").innerHTML = "Thanks for paying the bill";
+		}
+		else{
+			document.getElementById("billpaid").innerHTML = "You have already paid the bill";
+		}
+	}
+    
+}
+</script>
+</head>
+<body>
+
+<p>Enter your electricity bill account number:</p>
+<input type="text" id="accId"></input>
+<p><button onclick="payBill()" type="button">Pay Bill</button></p>
+<div id="billpaid"></div>
+</body>
+</html>
