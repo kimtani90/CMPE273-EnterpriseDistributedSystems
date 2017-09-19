@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!--Pulling Awesome Font -->
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+ <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<div class="container">
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<form method="POST" action="signup" role="form">
+						<div class="form-group">
+							<h2>Create account</h2>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="firstname"> First Name</label>
+							<input name="firstname" type="text" maxlength="50" required=true class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="lastname"> Last Name</label>
+							<input name="lastname" type="text" maxlength="50" required=true  class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="username"> User Name</label>
+							<input name="username" type="text" maxlength="50" required=true class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="pwd">Password</label>
+							<input name="pwd" type="password" maxlength="25" required=true class="form-control" placeholder="at least 6 characters" length="40">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="email">Email</label>
+							<input name="email" type="email" maxlength="50" required=true class="form-control">
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label" for="phno">Contact No</label>
+							<input name="phno" type="tel" maxlength="50" required=true class="form-control">
+						</div>
+						
+						
+						
+						<div class="form-group">
+							<button id="signupSubmit" type="submit" class="btn btn-info btn-block">Sign Up</button>
+						</div>
+						<hr>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+

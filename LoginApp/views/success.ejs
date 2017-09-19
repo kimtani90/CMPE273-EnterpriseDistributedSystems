@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Successful Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <form>
+  <body>
+    <h1><%= heading %></h1>
+    <div>
+    	<table border=1px>
+    	<tr><th><strong>Id </strong></th>
+    	<th><strong>User Name </strong></th>
+    	<th><strong>First Name </strong></th>
+    	<th><strong>Last Name </strong></th>
+    	<th><strong>Email </strong></th>
+    	<th><strong>Contact No </strong></th></tr>
+    	
+	       <% for(var i in data) 
+	            {                     
+            %>		
+           		    <tr><td><%= data[i].userid %></td>
+           		    <td><%= data[i].username %></td>
+                	<td><%= data[i].firstname %></td>
+                	<td><%= data[i].lastname %></td>
+                	<td><%= data[i].email %></td>
+                	<td><%= data[i].phno %></td></tr>
+            		      
+           <% 
+	            }  
+	       %>
+	    </table> 
+	</div>
+	<br>
+	<button type="submit" formmethod="POST"  formaction="/">Back</button>
+  </body>
+  </form>
+</html>
